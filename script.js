@@ -67,10 +67,3 @@ document.addEventListener('DOMContentLoaded', () => {
   renderNotes();
   getNowPlaying();
 });
-
-// Инициализация
-document.addEventListener('DOMContentLoaded', () => {
-  renderTodos();
-  renderNotes();
-  getNowPlaying();
-});
