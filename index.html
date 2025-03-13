@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List + Заметки + Spotify</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Мой Планировщик</h1>
+
+    <!-- To-Do List -->
+    <div class="section">
+      <h2>To-Do List</h2>
+      <input type="text" id="todo-input" placeholder="Добавить задачу">
+      <button onclick="addTodo()">Добавить</button>
+      <ul id="todo-list"></ul>
+    </div>
+
+    <!-- Заметки -->
+    <div class="section">
+      <h2>Заметки</h2>
+      <textarea id="notes-input" placeholder="Введите вашу заметку..."></textarea>
+      <button onclick="saveNotes()">Сохранить</button>
+      <div id="notes-display"></div>
+    </div>
+
+    <!-- Spotify Player -->
+    <div class="section">
+      <h2>Сейчас играет</h2>
+      <div id="now-playing">
+        <img id="album-art" src="" alt="Обложка альбома">
+        <p id="track-name"></p>
+        <p id="artist-name"></p>
+      </div>
+      <button onclick="getNowPlaying()">Обновить</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
