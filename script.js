@@ -17,7 +17,7 @@ function renderTodos() {
   todoList.innerHTML = todos.map(todo => `
     <li>
       <span>${todo.text}</span>
-      <button onclick="deleteTodo(${todo.id})">Удалить</button>
+      <button onclick="deleteTodo(${todo.id})">🗑️</button>
     </li>
   `).join('');
 }
@@ -60,6 +60,13 @@ async function getNowPlaying() {
   document.getElementById('artist-name').textContent = nowPlaying.artist;
   document.getElementById('album-art').src = nowPlaying.albumArt;
 }
+
+// Инициализация
+document.addEventListener('DOMContentLoaded', () => {
+  renderTodos();
+  renderNotes();
+  getNowPlaying();
+});
 
 // Инициализация
 document.addEventListener('DOMContentLoaded', () => {
